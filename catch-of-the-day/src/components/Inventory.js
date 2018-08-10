@@ -2,9 +2,7 @@ import React form "react";
 
 class Inventory extends React.Component {
   render() {
-    return (
-      <div className="inventory">Inventory!!!</div>
-    );
+    return <div className="inventory">Inventory!!!</div>;
   }
 }
 
