@@ -9,6 +9,10 @@ class App extends React.Component {
     order: {}
   };
 
+  addFish = fish => {
+    console.log("Adding a fish");
+  };
+
   render() {
     return (
       <div className="catch-of-the-day">
@@ -16,7 +20,7 @@ class App extends React.Component {
           <Header tagline="Fresh Seafood Market" />
         </div>
         <Order />
-        <Inventory />
+        <Inventory addFish={this.addFish} />
       </div>
     )
   }
