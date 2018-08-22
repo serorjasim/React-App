@@ -1,8 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { getFunName } from "../helpers";
 
 class StorePicker extends React.Component {
   myInput = React.createRef();
+
+  static propTypes = {
+    history: PropTypes.object
+  };
 
   goToStore = event => {
     // 1. Stop the form from submitting
@@ -20,12 +25,13 @@ class StorePicker extends React.Component {
         <input
           type="text"
           ref={this.myInput}
-          required placeholder="store Name"
+          required
+          placeholder="store Name"
           defaultValue={getFunName()}
         />
         <button type="submit">Visit Store &#x2192;</button>
       </form>
-    )
+    );
   }
 }
 
